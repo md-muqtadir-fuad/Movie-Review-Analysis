@@ -33,7 +33,6 @@ print(' '.join(data['review'][1]))
 
 data['review']=data['review'].apply(lambda x: [item.lower() for item in x])
 
-import nltk
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 stop_words=set(stopwords.words('english'))
@@ -46,20 +45,15 @@ data['review']=data['review'].apply(lambda x: [ps.stem(item) for item in x ])
 
 #train reviews
 data['review'] = data['review'].apply(lambda x: " ".join(x))
-
 train_reviews = data.review[:40000]
 
 #test reviews
 test_reviews = data.review[40000:]
 
 #TODO: train sentiments
-
-# Correct
 train_sentiment = data.sentiment[:40000]
 test_sentiment = data.sentiment[40000:]
 
-
-#Count vectorizer for bag of words
 #Count vectorizer for bag of words
 cv = CountVectorizer(min_df=0, max_df=1, binary = False, ngram_range = (1,3))
 
@@ -78,8 +72,6 @@ lb = LabelBinarizer()
 lb_train_sentiments = lb.fit_transform(train_sentiment)
 
 #TODO: transformed test sentiment data (similar to count vectorizer, transform test reviews, name it lb_test_sentiments)
-# Remember to use transform and not fit_transform
-
 lb_test_binary = lb.fit_transform(test_sentiment)
 
 # training the model
