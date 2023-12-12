@@ -1,4 +1,4 @@
-# Movie-Review-Analysis
+# Movie Review Analysis
 🎬 **Movie Review Sentiment Analysis**
 
 This Python script performs sentiment analysis on movie reviews using the IMDB Dataset. The dataset is loaded from a CSV file using Pandas and preprocessed to prepare the text data for analysis. The preprocessing steps include tokenization, removal of non-alphabetic characters, lowercase conversion, and stemming.
