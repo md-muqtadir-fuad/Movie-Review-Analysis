@@ -34,9 +34,5 @@ The model is trained on a subset of the dataset and evaluated on the remaining d
 Feel free to use or contribute to this project for further enhancements in movie review sentiment analysis!
 
 
-#DataScience #NLP #MachineLearning #SentimentAnalysis #Python #GitHub
-
 [https://github.com/md-muqtadir-fuad/Movie-Review-Analysis]
---- 
 
-Feel free to customize the descriptions based on your preferences and any additional information you'd like to include.
